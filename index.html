@@ -5,6 +5,55 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>HEYEggplant's Blog</title>
+    <script>
+      (function (win, flexible) {
+        let doc = win.document
+        let docEl = doc.documentElement
+        // let metaEl = doc.querySelector('meta[name="viewport"]')
+        // let flexibleEl = doc.querySelector('meta[name="flexible"]')
+        let dpr = win.devicePixelRatio
+        // let scale = 1 / dpr
+        let tid
+
+        docEl.setAttribute('data-dpr', dpr)
+
+        function refreshRem () {
+          var client = docEl.getBoundingClientRect()
+          var width = client.width
+          // var width = client.height ? Math.min(client.width, client.height) : client.width;
+          if (width / dpr > 540) {
+            width = 540 * dpr
+          }
+          let rem = width / 10
+          docEl.style.fontSize = rem + 'px'
+          flexible.rem = win.rem = rem
+        }
+
+        win.addEventListener('resize', function () {
+          clearTimeout(tid)
+          tid = setTimeout(refreshRem, 300)
+        }, false)
+        win.addEventListener('pageshow', function (e) {
+          if (e.persisted) {
+            clearTimeout(tid)
+            tid = setTimeout(refreshRem, 300)
+            window.location.reload(true)
+          }
+        }, false)
+
+        refreshRem()
+
+        flexible.dpr = win.dpr = dpr
+        flexible.refreshRem = refreshRem
+        flexible.rem2px = function (d) {
+          var val = parseFloat(d) * this.rem
+          if (typeof d === 'string' && d.match(/rem$/)) {
+            val += 'px'
+          }
+          return val
+        }
+      })(window, window['flexible'] || (window['flexible'] = {}))
+    </script>
 </head>
 
 <body>

@@ -11,7 +11,6 @@
 
 <script>
   import LodashWrapper from '@/components/lodash'
-  // import slice from '@/units/lodash'
 
   export default {
     name: 'app',
