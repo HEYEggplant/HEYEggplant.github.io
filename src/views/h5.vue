@@ -1,6 +1,6 @@
 <template>
   <div class="h5__wrapper">
-      h5 font-size 设置test 根元素为37.5px
+    <router-link :to="{name: 'HelloEggplant'}" tag="span">返回</router-link>
   </div>
 </template>
 
@@ -11,9 +11,24 @@ export default {
 </script>
 
 <style lang="less" scoped>
-  // @rem: 1/75rem;
+  @import '../styles/var';
 
   .h5__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 10rem;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 32*@rem;
+    background: @bg-color;
+    span {
+      width: 200*@rem;
+      height: 120*@rem;
+      line-height: 120*@rem;
+      text-align: center;
+      border-radius: 10px;
+      background: #ebc791;
+    }
   }
 </style>
