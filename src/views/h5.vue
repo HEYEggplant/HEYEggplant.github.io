@@ -21,7 +21,7 @@ export default {
     height: 100%;
     margin: 0 auto;
     font-size: 32*@rem;
-    background: @bg-color;
+    background: #fff;
     span {
       width: 200*@rem;
       height: 120*@rem;

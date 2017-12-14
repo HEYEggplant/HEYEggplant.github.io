@@ -51,13 +51,11 @@
       </h1>
     </header>
     <section>
-      待更新中
-      点击进入子页面
       <aside>
         <ul>
           <router-link :to="{name: 'Lodash'}" tag="li">lodash</router-link>
           <router-link :to="{name: 'H5'}" tag="li">H5</router-link>
-          <li>3</li>
+          <router-link :to="{name: 'Grid'}" tag="li">Grid</router-link>
           <li>4</li>
           <li>5</li>
         </ul>

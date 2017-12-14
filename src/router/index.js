@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Lodash from '@/views/lodash-page'
 import HelloEggplant from '@/views/hello-eggplant'
 import H5 from '@/views/h5'
+import Grid from '@/views/grid'
 
 Vue.use(Router)
 
@@ -20,5 +21,9 @@ export default new Router({
     path: '/h5',
     name: 'H5',
     component: H5
+  }, {
+    path: '/grid',
+    name: 'Grid',
+    component: Grid
   }]
 })
