@@ -5,6 +5,9 @@ import Lodash from '@/views/lodash-page'
 import HelloEggplant from '@/views/hello-eggplant'
 import H5 from '@/views/h5'
 import Grid from '@/views/grid'
+import CmsDemo from '@/views/cms-demo'
+import CmsIndex from '@/views/cms-index'
+import CmsDetail from '@/views/cms-detail'
 
 Vue.use(Router)
 
@@ -25,5 +28,17 @@ export default new Router({
     path: '/grid',
     name: 'Grid',
     component: Grid
+  }, {
+    path: '/cms-demo',
+    name: 'CmsDemo',
+    component: CmsDemo
+  }, {
+    path: '/cms-index',
+    name: 'CmsIndex',
+    component: CmsIndex
+  }, {
+    path: '/cms-detail',
+    name: 'CmsDetail',
+    component: CmsDetail
   }]
 })

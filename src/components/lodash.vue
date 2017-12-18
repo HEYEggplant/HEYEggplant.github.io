@@ -8,7 +8,7 @@
       </span>
     </div>
     <div @click="getValues">return</div>
-    <div v-text="returnValue"></div>
+    <div v-text="returnValue">   </div>
   </section>
 </template>
 
@@ -79,7 +79,7 @@
           border: none;
           outline: none;
           border-radius: 5px;
-          background: @bg-color;
+          background: #fff;
         }
       }
     }

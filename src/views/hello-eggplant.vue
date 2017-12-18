@@ -56,7 +56,7 @@
           <router-link :to="{name: 'Lodash'}" tag="li">lodash</router-link>
           <router-link :to="{name: 'H5'}" tag="li">H5</router-link>
           <router-link :to="{name: 'Grid'}" tag="li">Grid</router-link>
-          <li>4</li>
+          <router-link :to="{name: 'CmsDemo'}" tag="li">CmsDemo</router-link>
           <li>5</li>
         </ul>
       </aside>

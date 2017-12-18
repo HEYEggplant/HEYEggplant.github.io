@@ -6,6 +6,11 @@
       :argumentsCount="3"
       v-on:getArguments="slice"
       :returnValue="returnValue"></LodashWrapper>
+      <LodashWrapper
+      :functionName="`compact`"
+      :argumentsCount="1"
+      v-on:getArguments="compact"
+      :returnValue="returnValue"></LodashWrapper>
   </div>
 </template>
 
@@ -41,13 +46,26 @@
           end += length
         } // 判断end是否从末尾开始计数
         length = start > end ? 0 : ((end - start) >>> 0) // 开始大于介绍 从0开始 否则返回数组长度做处理
-        start >>>= 0 // 给其实位置做不为空处理
+        start >>>= 0 // 给起始位置做不为空处理
         let index = -1
         const result = new Array(length)
         while (++index < length) {
           result[index] = array[index + start]
         }
         this.returnValue = result
+      },
+      compact (array) {
+        let resIndex = 0
+        const result = []
+        if (array == null) {
+          return result
+        }
+        for (const value of array) {
+          if (value) {
+            result[resIndex++] = value
+          }
+        }
+        return result
       }
     }
   }
