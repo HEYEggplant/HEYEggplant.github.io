@@ -13,10 +13,4 @@ export default {
 <style lang="less">
   @import './styles/base';
 
-#app {
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
-  // text-align: center;
-  // background: @background-color;
-}
 </style>

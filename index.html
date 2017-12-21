@@ -3,57 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="applicable-device" content="mobile">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="google" value="notranslate">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>HEYEggplant's Blog</title>
-    <script>
-      (function (win, flexible) {
-        let doc = win.document
-        let docEl = doc.documentElement
-        // let metaEl = doc.querySelector('meta[name="viewport"]')
-        // let flexibleEl = doc.querySelector('meta[name="flexible"]')
-        let dpr = win.devicePixelRatio
-        // let scale = 1 / dpr
-        let tid
-
-        docEl.setAttribute('data-dpr', dpr)
-
-        function refreshRem () {
-          var client = docEl.getBoundingClientRect()
-          var width = client.width
-          // var width = client.height ? Math.min(client.width, client.height) : client.width;
-          if (width / dpr > 540) {
-            width = 540 * dpr
-          }
-          let rem = width / 10
-          docEl.style.fontSize = rem + 'px'
-          flexible.rem = win.rem = rem
-        }
-
-        win.addEventListener('resize', function () {
-          clearTimeout(tid)
-          tid = setTimeout(refreshRem, 300)
-        }, false)
-        win.addEventListener('pageshow', function (e) {
-          if (e.persisted) {
-            clearTimeout(tid)
-            tid = setTimeout(refreshRem, 300)
-            window.location.reload(true)
-          }
-        }, false)
-
-        refreshRem()
-
-        flexible.dpr = win.dpr = dpr
-        flexible.refreshRem = refreshRem
-        flexible.rem2px = function (d) {
-          var val = parseFloat(d) * this.rem
-          if (typeof d === 'string' && d.match(/rem$/)) {
-            val += 'px'
-          }
-          return val
-        }
-      })(window, window['flexible'] || (window['flexible'] = {}))
-    </script>
+    <!-- <script src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/2.5.2/vconsole.min.js"></script> -->
 </head>
 
 <body>
